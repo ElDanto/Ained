@@ -9,6 +9,7 @@ use App\Models\Client;
 class ClientStatus extends Model
 {
     use HasFactory;
+    protected $fillable = ['status'];
 
     public function clients()
     {

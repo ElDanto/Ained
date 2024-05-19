@@ -20,7 +20,14 @@ class DealController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate(
+            [
+                "number"=> ['required', 'integer','min:9'],
+                'status_id'=> ['required','integer'],
+            ]
+        );
+        $deal = Deal::create($data);
+        return $deal;
     }
 
     /**

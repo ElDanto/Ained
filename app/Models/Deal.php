@@ -9,6 +9,8 @@ class Deal extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['number', 'status_id'];
+
     public function status()
     {
         return $this->belongsTo(DealStatus::class);

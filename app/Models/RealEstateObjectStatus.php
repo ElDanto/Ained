@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class RealEstateObjectStatus extends Model
 {
     use HasFactory;
+    protected $fillable = ['status'];
 
     public function deals()
     {

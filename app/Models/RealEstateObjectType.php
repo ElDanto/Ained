@@ -9,6 +9,7 @@ class RealEstateObjectType extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['type'];
     public function deals()
     {
         return $this->hasMany(RealEstateObject::class);

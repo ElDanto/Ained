@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class RealEstateObject extends Model
 {
     use HasFactory;
+    protected $fillable = ['type_id', 'status_id','number_of_rooms','address','area','floor','apartament_number','price'];
 
     public function type()
     {
