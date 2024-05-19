@@ -20,7 +20,9 @@ Route::get('/objects/{id}', [RealEstateObjectController::class,'show'])->middlew
 
 Route::get('/clients', [ClientController::class, 'index'])->middleware('auth:sanctum');
 Route::get('/clients/{id}', [ClientController::class, 'show'])->middleware('auth:sanctum');
+Route::post('/clients' , [ClientController::class,'store'])->middleware('auth:sanctum');
 
 Route::get('/deals', [DealController::class,'index'])->middleware('auth:sanctum');
 Route::get('/deals/{id}', [DealController::class,'show'])->middleware('auth:sanctum');
+Route::post('/deals', [DealController::class, 'store'])->middleware('auth:sanctum');
 
